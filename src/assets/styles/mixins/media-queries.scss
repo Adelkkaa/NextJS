@@ -1,0 +1,37 @@
+@import "../variables/mediaVariables";
+
+@mixin portrait-mobile() {
+  @media screen and (max-width: #{$portrait-mobile}px) {
+    @content;
+  }
+}
+
+@mixin landscape-mobile() {
+  @media screen and (max-width: #{$landscape-mobile}px) {
+    @content;
+  }
+}
+
+@mixin portrait-tablet() {
+  @media screen and (max-width: #{$portrait-tablet}px) {
+    @content;
+  }
+}
+
+@mixin landscape-tablet() {
+  @media screen and (max-width: #{$landscape-tablet}px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media screen and (max-width: #{$laptop}px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (max-width: #{$desktop}px) {
+    @content;
+  }
+}

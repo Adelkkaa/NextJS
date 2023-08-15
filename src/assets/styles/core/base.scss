@@ -1,0 +1,28 @@
+@import './fonts';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Golos', sans-serif;
+}
+
+html {
+  font-size: var(--default-size);
+  background-color: var(--bg-login);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--main-white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

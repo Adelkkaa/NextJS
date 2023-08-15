@@ -1,0 +1,19 @@
+$min-portrait-mobile: 0;
+$max-portrait-mobile: 375;
+$min-landscape-mobile: 376;
+$max-landscape-mobile: 480;
+$min-portrait-tablet: 481;
+$max-portrait-tablet: 768;
+$min-landscape-tablet: 769;
+$max-landscape-tablet: 1024;
+$min-laptop: 1025;
+$max-laptop: 1280;
+$min-desktop: 1281;
+$max-desktop: 1440;
+
+$portrait-mobile: $max-portrait-mobile;
+$landscape-mobile: $max-landscape-mobile;
+$portrait-tablet: $max-portrait-tablet;
+$landscape-tablet: $max-landscape-tablet;
+$laptop: $max-laptop;
+$desktop: $max-desktop;

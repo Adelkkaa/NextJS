@@ -1,0 +1,40 @@
+@import '../mixins/media-queries.scss';
+
+:root {
+  --default-size: 16px;
+  --level-1: 4rem;
+  --level-2: 3rem;
+  --level-3: 2rem;
+  --level-4: 1.5rem;
+  --level-5: 1.25rem;
+  --level-6: 1rem;
+}
+
+@include landscape-tablet {
+  :root {
+    --level-1: 2rem;
+    --level-2: 2rem;
+    --level-3: 1.5rem;
+    --level-4: 1rem;
+  }
+}
+
+@include portrait-tablet {
+  :root {
+    --level-3: 1.25rem;
+    --level-5: 1rem;
+  }
+}
+
+@include landscape-mobile {
+  :root {
+    --level-2: 1.5rem;
+  }
+}
+
+@include portrait-mobile {
+  :root {
+    --level-3: 1rem;
+    --level-6: 0.875rem;
+  }
+}

@@ -1,0 +1,32 @@
+@import './media-variables';
+
+:export {
+  defaultSize: var(--default-size);
+  level1: var(--level-1);
+  level2: var(--level-2);
+  level3: var(--level-3);
+  level4: var(--level-4);
+  level5: var(--level-5);
+  level6: var(--level-6);
+  mainBlack: var(--main-black);
+  mainWhite: var(--main-white);
+  mainGreen: var(--main-green);
+  minPortraitMobile: $min-portrait-mobile;
+  maxPortraitMobile: $max-portrait-mobile;
+  minLandscapeMobile: $min-landscape-mobile;
+  maxLandscapeMobile: $max-landscape-mobile;
+  minPortraitTablet: $min-portrait-tablet;
+  maxPortraitTablet: $max-portrait-tablet;
+  minLandscapeTablet: $min-landscape-tablet;
+  maxLandscapeTablet: $max-landscape-tablet;
+  minLaptop: $min-laptop;
+  maxLaptop: $max-laptop;
+  minDesktop: $min-desktop;
+  maxDesktop: $max-desktop;
+  portraitMobile: $portrait-mobile;
+  landscapeMobile: $landscape-mobile;
+  portraitTablet: $portrait-mobile;
+  landscapeTablet: $landscape-mobile;
+  laptop: $laptop;
+  desktop: $desktop;
+}

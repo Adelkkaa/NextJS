@@ -1,0 +1,14 @@
+.formWrapper {
+  margin-top: 32px;
+  padding: 32px;
+  max-width: 734px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-black);
+  border-radius: 8px;
+
+  .formTitle {
+    font-size: 48px;
+  }
+}
