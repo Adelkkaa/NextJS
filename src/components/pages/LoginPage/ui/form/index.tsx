@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { Typography } from 'shared/ui/Typography';
 
-// todo Сделать форму авторизации с помощью react-hook-forms, свой Input
+// todo Сделать форму авторизации с помощью react-hook-forms, свой Input, поменять место хранения redux
 
 export const LoginForm = () => {
   return (
