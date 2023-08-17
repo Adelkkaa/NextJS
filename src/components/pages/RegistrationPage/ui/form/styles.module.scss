@@ -24,7 +24,7 @@
     border-top: 1px solid var(--main-button);
   }
 
-  .formLogin {
+  .formRegistry {
     max-width: 60%;
     min-width: 60%;
     display: flex;
@@ -49,13 +49,7 @@
   }
 }
 
-.eyeLogo {
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-}
-
-.formRegistry {
+.formLogin {
   display: flex;
   gap: 16px;
 

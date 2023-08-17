@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import React from "react";
+import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
 
-import styles from "../../components/pages/HomePage/styles.module.css";
-import Link from "next/link";
-import { postApi } from "../../../redux/services/postService";
+import styles from '../../components/pages/HomePage/styles.module.css';
+import Link from 'next/link';
+import { postApi } from '../../redux/services/postService';
 
 const Table: React.FC = () => {
   const { data: photos, error, isLoading } = postApi.useFetchAllPhotosQuery(3);
@@ -20,7 +20,7 @@ const Table: React.FC = () => {
 
       <div className={styles.wrapper}>
         <h1>Post Page</h1>
-        <Link className={styles.link} href={"/"}>
+        <Link className={styles.link} href={'/'}>
           Перейти на другую страницу
         </Link>
       </div>
@@ -33,12 +33,7 @@ const Table: React.FC = () => {
           photos.map((item) => {
             return (
               <div className={styles.photoWrapper} key={item.id}>
-                <Image
-                  src={item.thumbnailUrl || item.url}
-                  width={300}
-                  height={300}
-                  alt="photo"
-                />
+                <Image src={item.thumbnailUrl || item.url} width={300} height={300} alt="photo" />
                 <p className={styles.photoTitle}>{item.title}</p>
               </div>
             );

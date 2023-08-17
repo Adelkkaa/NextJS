@@ -5,7 +5,7 @@ import Image from 'next/image';
 import logo from '@images/spotifyLogo.svg';
 import Link from 'next/link';
 
-export const LoginHeader = () => (
+export const AuthHeader = () => (
   <div className={styles.headerWrapper}>
     <Link href={'/'}>
       <Image src={logo} alt="spotify-logo" width={117} height={36} />
