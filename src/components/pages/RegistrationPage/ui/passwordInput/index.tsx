@@ -4,7 +4,7 @@ import { FormValues, Values } from '../form';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import Image from 'next/image';
 
-import eyeLogo from '@images/eyeLogo.svg';
+import eyeLogo from '@images/AuthPage/eyeLogo.svg';
 
 import styles from './styles.module.scss';
 

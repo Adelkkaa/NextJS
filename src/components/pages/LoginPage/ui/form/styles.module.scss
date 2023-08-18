@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries';
+
 .formWrapper {
   margin-top: 32px;
   padding: 32px;
@@ -67,6 +69,18 @@
     transition: all 0.1s ease-in-out;
     &:hover {
       border-bottom: 2px solid var(--main-green);
+    }
+  }
+}
+
+@include landscape-mobile {
+  .formWrapper {
+    .formLogin {
+      max-width: 100%;
+      min-width: 100%;
+    }
+    .formSeparation {
+      width: 100%;
     }
   }
 }

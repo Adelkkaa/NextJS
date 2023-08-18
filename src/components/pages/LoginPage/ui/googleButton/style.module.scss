@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries';
+
 .google {
   background-color: transparent;
   border-radius: 500px;
@@ -25,5 +27,12 @@
       center center no-repeat;
     width: 24px;
     height: 24px;
+  }
+}
+
+@include landscape-mobile {
+  .google {
+    width: 100%;
+    gap: 14px;
   }
 }

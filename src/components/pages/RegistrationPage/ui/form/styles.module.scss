@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries';
+
 .formWrapper {
   margin-top: 32px;
   padding: 32px;
@@ -61,6 +63,29 @@
     transition: all 0.1s ease-in-out;
     &:hover {
       border-bottom: 2px solid var(--main-green);
+    }
+  }
+}
+
+@include portrait-tablet {
+  .formWrapper {
+    .formTitle {
+      text-align: center;
+    }
+  }
+}
+
+@include landscape-mobile {
+  .formWrapper {
+    .formRegistry {
+      max-width: 100%;
+      min-width: 100%;
+    }
+    .formSeparation {
+      width: 100%;
+    }
+    .formLogin {
+      align-items: center;
     }
   }
 }

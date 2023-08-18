@@ -1,0 +1,10 @@
+.mainPageWrapper {
+  display: flex;
+  background-color: var(--bg-login);
+  height: 100%;
+}
+
+.mainPageContent {
+  display: flex;
+  flex-direction: column;
+}

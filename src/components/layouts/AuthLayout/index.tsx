@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { AuthHeader } from 'shared/ui/AuthHeader';
+import { AuthHeader } from 'widgets/AuthHeader';
 
 import styles from './styles.module.scss';
 

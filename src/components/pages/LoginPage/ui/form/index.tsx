@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { useForm, useWatch } from 'react-hook-form';
 import Input from 'shared/ui/Input';
-import eyeLogo from '@images/eyeLogo.svg';
+import eyeLogo from '@images/AuthPage/eyeLogo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -43,7 +43,7 @@ export const LoginForm = () => {
     });
 
     if (res && !res.error) {
-      router.push('/newPage');
+      router.push('/');
       setAuthError('');
     } else {
       console.log(res);
@@ -53,7 +53,9 @@ export const LoginForm = () => {
 
   return (
     <div className={styles.formWrapper}>
-      <h1 className={styles.formTitle}>Войти в Spotify</h1>
+      <Typography el="h1" level={1} weight="bold" className={styles.formTitle}>
+        Войти в Spotify
+      </Typography>
       <GoogleButton />
       <hr className={styles.formSeparation} />
       <form onSubmit={handleSubmit(onFormSubmit)} className={styles.formLogin} id="loginFormModal">
