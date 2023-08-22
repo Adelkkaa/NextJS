@@ -1,7 +1,8 @@
 .menu {
   background-color: var(--main-black);
-  width: 310px;
-  height: 100%;
+  min-width: 310px;
+  max-width: 310px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 70px 39px 0 30px;

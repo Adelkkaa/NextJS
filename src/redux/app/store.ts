@@ -1,13 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import imagesDataSliceReducer from "../features/imagesData";
-import { postApi } from "../services/postService";
+import { configureStore } from '@reduxjs/toolkit';
+import activeSong from 'redux/features/activeSong';
+import { shazamApi } from 'redux/services/shazamService';
 
 export const store = configureStore({
   reducer: {
-    imagesDataSliceReducer,
-    [postApi.reducerPath]: postApi.reducer,
+    activeSong: activeSong,
+    [shazamApi.reducerPath]: shazamApi.reducer,
   },
-  middleware: (gDM) => gDM().concat(postApi.middleware),
+  middleware: (gDM) => gDM().concat(shazamApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
