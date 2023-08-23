@@ -5,6 +5,7 @@ type Song = {
   subtitle: string;
   url: string;
   image: string;
+  isPlaying: boolean;
 };
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
   subtitle: '',
   url: '',
   image: '',
+  isPlaying: false,
 };
 
 const activeSongSlice = createSlice({
@@ -24,9 +26,12 @@ const activeSongSlice = createSlice({
       state.url = action.payload.url;
       state.image = action.payload.image;
     },
+    setIsPlaying: (state, action) => {
+      state.isPlaying = action.payload;
+    },
   },
 });
 
-export const { setActiveSong } = activeSongSlice.actions;
+export const { setActiveSong, setIsPlaying } = activeSongSlice.actions;
 
 export default activeSongSlice.reducer;

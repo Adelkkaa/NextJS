@@ -14,8 +14,9 @@
 .audioPlayer {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .controlWrapper {
@@ -33,12 +34,23 @@
   }
 }
 
+.timeRangeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .timeRange {
   accent-color: var(--main-white);
   cursor: pointer;
   width: 275px;
   height: 5px;
   border: none;
+
+  &Title {
+    min-width: 50px;
+    max-width: 50px;
+  }
 }
 
 .volume {
@@ -64,7 +76,7 @@
   &Img {
     position: absolute;
     left: 0;
-    top: -320px;
+    top: -310px;
   }
 
   &Title {
