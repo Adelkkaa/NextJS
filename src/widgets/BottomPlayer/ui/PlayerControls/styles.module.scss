@@ -1,0 +1,14 @@
+.controlWrapper {
+  display: flex;
+  gap: 22px;
+
+  .controlPrev {
+    cursor: pointer;
+  }
+  .controlPause {
+    cursor: pointer;
+  }
+  .controlNext {
+    cursor: pointer;
+  }
+}

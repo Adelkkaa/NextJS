@@ -1,22 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import volumeIcon from '@images/HomePage/volume.svg';
-import prevIcon from '@images/HomePage/prev.svg';
-import nextIcon from '@images/HomePage/next.svg';
-import pauseIcon from '@images/HomePage/pause.svg';
-import playIcon from '@images/HomePage/play.svg';
-
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
-import { Typography } from 'shared/ui/Typography';
 import { setIsPlaying } from 'redux/features/activeSong';
+import PlayerAudioInfo from './ui/PlayerAudioInfo';
+import PlayerControls from './ui/PlayerControls';
+import PlayerTimeRange from './ui/PlayerTimeRange';
+import PlayerVolume from './ui/PlayerVolume';
+
+// todo  выяснить как правильно будет реализовать логику переключения на следующий и предыдущий треки
 
 const BottomPlayer = () => {
   const { title, subtitle, image, url, isPlaying } = useAppSelector((state) => state.activeSong);
   const dispatch = useAppDispatch();
 
-  const [volume, setVolume] = useState(1);
   const [fullTime, setFullTime] = useState('00:00');
   const [currTime, setCurrTime] = useState('00:00');
   const [timeValue, setTimeValue] = useState(0);
@@ -62,105 +60,31 @@ const BottomPlayer = () => {
     return () => {
       clearInterval(intervalRef.current);
     };
-  }, [isPlaying, url]);
-
-  const handleChangeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (playerRef && playerRef.current) {
-      const value = Number(e.target.value) / 100;
-      setVolume(Number(e.target.value));
-      playerRef.current.volume = value;
-    }
-  };
-
-  const handleChangeRangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (playerRef && playerRef.current) {
-      const value = (Number(e.target.value) / 100) * playerRef.current?.duration;
-      playerRef.current.currentTime = value;
-      setTimeValue(Number(e.target.value));
-    }
-  };
-
-  const handleClickControlButton = () => {
-    if (playerRef && playerRef.current && url !== '') {
-      isPlaying ? dispatch(setIsPlaying(false)) : dispatch(setIsPlaying(true));
-    }
-  };
+  }, [isPlaying, url, dispatch]);
 
   return (
     <div className={styles.bottomPlayer}>
-      <div className={styles.audioInfo}>
-        <Typography className={styles.audioInfoTitle} weight="bold" level={6}>
-          {title}
-        </Typography>
-        <Typography className={styles.audioInfoSubtitle} style={{ opacity: 0.6 }} level={6}>
-          {subtitle}
-        </Typography>
-        {image && (
-          <Image
-            className={styles.audioInfoImg}
-            src={image}
-            alt="song-image"
-            width={310}
-            height={310}
-          />
-        )}
-      </div>
-      <audio style={{ display: 'none' }} ref={playerRef} controls src={url}></audio>
+      <PlayerAudioInfo title={title} subtitle={subtitle} image={image} />
+      <audio
+        onPlay={() => dispatch(setIsPlaying(true))}
+        onPause={() => dispatch(setIsPlaying(false))}
+        style={{ display: 'none' }}
+        ref={playerRef}
+        controls
+        src={url}
+      ></audio>
       <div className={styles.audioPlayer}>
-        <div className={styles.controlWrapper}>
-          <Image
-            className={styles.controlPrev}
-            src={prevIcon}
-            alt="prev-icon"
-            width={32}
-            height={32}
-          />
-          <Image
-            className={styles.controlPause}
-            src={isPlaying ? pauseIcon : playIcon}
-            alt="pause-icon"
-            width={32}
-            height={32}
-            onClick={handleClickControlButton}
-          />
-          <Image
-            className={styles.controlNext}
-            src={nextIcon}
-            alt="next-icon"
-            width={32}
-            height={32}
-          />
-        </div>
-        <div className={styles.timeRangeWrapper}>
-          <Typography className={styles.timeRangeTitle}>{currTime}</Typography>
-          <input
-            min={0}
-            max={100}
-            onChange={(e) => handleChangeRangeValue(e)}
-            value={timeValue}
-            className={styles.timeRange}
-            type="range"
-          />
-          <Typography className={styles.timeRangeTitle}>{fullTime}</Typography>
-        </div>
-      </div>
-      <div className={styles.volume}>
-        <Image
-          className={styles.volumeIcon}
-          src={volumeIcon}
-          alt="volume-icon"
-          width={32}
-          height={32}
-        />
-        <input
-          min={0}
-          max={100}
-          onChange={handleChangeVolume}
-          value={volume}
-          className={styles.volumeRange}
-          type="range"
+        <PlayerControls isPlaying={isPlaying} url={url} ref={playerRef} />
+        <PlayerTimeRange
+          currTime={currTime}
+          fullTime={fullTime}
+          timeValue={timeValue}
+          isPlaying={isPlaying}
+          setTimeValue={setTimeValue}
+          ref={playerRef}
         />
       </div>
+      <PlayerVolume ref={playerRef} />
     </div>
   );
 };

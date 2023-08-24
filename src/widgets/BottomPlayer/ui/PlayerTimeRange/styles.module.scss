@@ -1,0 +1,18 @@
+.timeRangeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeRange {
+  accent-color: var(--main-white);
+  cursor: pointer;
+  width: 275px;
+  height: 5px;
+  border: none;
+
+  &Title {
+    min-width: 50px;
+    max-width: 50px;
+  }
+}
