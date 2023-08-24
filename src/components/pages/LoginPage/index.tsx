@@ -1,14 +1,11 @@
 import React from 'react';
-import { LoginHeader } from './ui/header';
 import { LoginForm } from './ui/form';
-
-import styles from './styles.module.scss';
+import { AuthLayout } from 'components/layouts/AuthLayout';
 
 export const LoginPage = () => {
   return (
-    <div className={styles.loginPageWrapper}>
-      <LoginHeader />
+    <AuthLayout>
       <LoginForm />
-    </div>
+    </AuthLayout>
   );
 };

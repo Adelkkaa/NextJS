@@ -1,0 +1,43 @@
+.menu {
+  background-color: var(--main-black);
+  min-width: 310px;
+  max-width: 310px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 39px 0 30px;
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menuLink {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.menuLinkThird {
+  margin-bottom: 29px;
+}
+
+.menuLinkActive {
+  opacity: 1;
+}
+
+.menuLinkIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.menuLinkTitle {
+  display: inline-block;
+}

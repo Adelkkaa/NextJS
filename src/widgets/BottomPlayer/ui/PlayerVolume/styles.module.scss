@@ -1,0 +1,15 @@
+.volume {
+  display: flex;
+  align-items: center;
+  &Range {
+    accent-color: var(--main-white);
+    cursor: pointer;
+    width: 119px;
+    height: 5px;
+    border: none;
+  }
+
+  &Icon {
+    cursor: pointer;
+  }
+}

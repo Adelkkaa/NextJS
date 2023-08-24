@@ -1,4 +1,4 @@
-// import { HomePage } from "./components/pages/HomePage";
+import { HomePage } from 'components/pages/HomePage/index';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -12,7 +12,7 @@ const Home: NextPage = (): JSX.Element => (
       <link rel="shortcut icon" href="/favicon.ico" />
       <base href="/" />
     </Head>
-    {/* <HomePage /> */}
+    <HomePage />
   </>
 );
 

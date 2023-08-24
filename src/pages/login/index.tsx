@@ -1,4 +1,3 @@
-// import { HomePage } from "./components/pages/HomePage";
 import { LoginPage } from 'components/pages/LoginPage';
 import { NextPage } from 'next';
 import Head from 'next/head';

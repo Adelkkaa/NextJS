@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries';
+
 .formWrapper {
   margin-top: 32px;
   padding: 32px;
@@ -5,10 +7,80 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--main-black);
   border-radius: 8px;
+  flex-direction: column;
 
   .formTitle {
     font-size: 48px;
+  }
+
+  .formSeparation {
+    width: 70%;
+    margin: 32px 100px;
+    color: var(--main-white);
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--main-button);
+  }
+
+  .formLogin {
+    max-width: 60%;
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .formBtn {
+      color: var(--main-black);
+      background-color: var(--main-green);
+      border: none;
+      width: 100%;
+      user-select: none;
+      border-radius: 500px;
+      min-block-size: 48px;
+      cursor: pointer;
+      margin-top: 32px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.eyeLogo {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.formRegistry {
+  display: flex;
+  gap: 16px;
+
+  .formLink {
+    text-decoration: none;
+    color: var(--main-green);
+    border-bottom: 2px solid transparent;
+
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      border-bottom: 2px solid var(--main-green);
+    }
+  }
+}
+
+@include landscape-mobile {
+  .formWrapper {
+    .formLogin {
+      max-width: 100%;
+      min-width: 100%;
+    }
+    .formSeparation {
+      width: 100%;
+    }
   }
 }

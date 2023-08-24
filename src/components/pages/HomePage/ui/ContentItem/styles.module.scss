@@ -1,0 +1,44 @@
+.songWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    .songImg {
+      opacity: 0.7;
+    }
+    .songTitle {
+      opacity: 0.7;
+    }
+    .songArtist {
+      opacity: 0.7;
+    }
+    .playImg {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+.songImgWrapper {
+  position: relative;
+}
+
+.songImg {
+  border-radius: 8px;
+  position: relative;
+}
+
+.playImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}

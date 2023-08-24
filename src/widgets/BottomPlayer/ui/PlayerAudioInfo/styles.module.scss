@@ -1,0 +1,20 @@
+.audioInfo {
+  max-width: 200px;
+  min-width: 200px;
+
+  &Img {
+    position: absolute;
+    left: 0;
+    top: -310px;
+  }
+
+  &Title {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &Subtitle {
+    cursor: pointer;
+    user-select: none;
+  }
+}
