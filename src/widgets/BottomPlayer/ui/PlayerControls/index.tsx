@@ -8,7 +8,7 @@ import playIcon from '@images/HomePage/play.svg';
 
 import styles from './styles.module.scss';
 import { useAppDispatch } from 'redux/app/hooks';
-import { setIsPlaying } from 'redux/features/activeSong';
+import { setIsPlaying, setNextSong, setPreviousSong } from 'redux/features/activeSong';
 
 type Props = {
   isPlaying: boolean;
@@ -23,9 +23,24 @@ const PlayerControls = forwardRef<HTMLAudioElement, Props>(({ isPlaying, url }, 
       isPlaying ? dispatch(setIsPlaying(false)) : dispatch(setIsPlaying(true));
     }
   };
+
+  const handleClickNextButton = () => {
+    dispatch(setNextSong());
+  };
+
+  const handleClickPrevButton = () => {
+    dispatch(setPreviousSong());
+  };
   return (
     <div className={styles.controlWrapper}>
-      <Image className={styles.controlPrev} src={prevIcon} alt="prev-icon" width={32} height={32} />
+      <Image
+        className={styles.controlPrev}
+        src={prevIcon}
+        alt="prev-icon"
+        width={32}
+        height={32}
+        onClick={handleClickPrevButton}
+      />
       <Image
         className={styles.controlPause}
         src={isPlaying ? pauseIcon : playIcon}
@@ -34,7 +49,14 @@ const PlayerControls = forwardRef<HTMLAudioElement, Props>(({ isPlaying, url }, 
         height={32}
         onClick={handleClickControlButton}
       />
-      <Image className={styles.controlNext} src={nextIcon} alt="next-icon" width={32} height={32} />
+      <Image
+        className={styles.controlNext}
+        src={nextIcon}
+        alt="next-icon"
+        width={32}
+        height={32}
+        onClick={handleClickNextButton}
+      />
     </div>
   );
 });

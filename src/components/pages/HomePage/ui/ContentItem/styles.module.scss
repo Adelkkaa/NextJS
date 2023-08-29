@@ -9,6 +9,22 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
+  &Active {
+    .songImg {
+      opacity: 0.7;
+    }
+    .songTitle {
+      opacity: 0.7;
+    }
+    .songArtist {
+      opacity: 0.7;
+    }
+    .playImg {
+      display: block;
+      opacity: 1;
+    }
+  }
+
   &:hover {
     .songImg {
       opacity: 0.7;

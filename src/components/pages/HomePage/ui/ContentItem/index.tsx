@@ -7,27 +7,43 @@ import playIcon from '@images/HomePage/play.svg';
 import pauseIcon from '@images/HomePage/pause.svg';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
 import { setActiveSong, setIsPlaying } from 'redux/features/activeSong';
+import cn from 'classnames';
 
 type Props = {
   title: string;
   subtitle: string;
   url: string;
   image: string;
+  index: number;
+  handlePostPlaylist: (arg: number) => void;
 };
 
-const ContentItem: React.FC<Props> = ({ title, subtitle, url, image }) => {
+const ContentItem: React.FC<Props> = ({
+  title,
+  subtitle,
+  url,
+  image,
+  handlePostPlaylist,
+  index,
+}) => {
   const dispatch = useAppDispatch();
 
   const { url: storeUrl, isPlaying } = useAppSelector((state) => state.activeSong);
   const currentSongPlayed = storeUrl === url;
 
   const handleClickSong = () => {
-    dispatch(setActiveSong({ title, subtitle, url, image }));
+    dispatch(setActiveSong({ title, subtitle, url, image, activeIndex: index }));
+    handlePostPlaylist(index);
     isPlaying && currentSongPlayed ? dispatch(setIsPlaying(false)) : dispatch(setIsPlaying(true));
   };
 
   return (
-    <div className={styles.songWrapper} onClick={handleClickSong}>
+    <div
+      className={cn(styles.songWrapper, {
+        [styles.songWrapperActive]: currentSongPlayed,
+      })}
+      onClick={handleClickSong}
+    >
       <div className={styles.songImgWrapper}>
         <Image className={styles.songImg} src={image} width={250} height={250} alt={'song-image'} />
         <Image

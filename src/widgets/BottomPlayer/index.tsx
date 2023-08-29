@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
-import { setIsPlaying } from 'redux/features/activeSong';
+import { setIsPlaying, setNextSong } from 'redux/features/activeSong';
 import PlayerAudioInfo from './ui/PlayerAudioInfo';
 import PlayerControls from './ui/PlayerControls';
 import PlayerTimeRange from './ui/PlayerTimeRange';
@@ -67,7 +67,9 @@ const BottomPlayer = () => {
       <PlayerAudioInfo title={title} subtitle={subtitle} image={image} />
       <audio
         onPlay={() => dispatch(setIsPlaying(true))}
-        onPause={() => dispatch(setIsPlaying(false))}
+        onPause={() => {
+          timeValue > 99 && isPlaying ? dispatch(setNextSong()) : dispatch(setIsPlaying(false));
+        }}
         style={{ display: 'none' }}
         ref={playerRef}
         controls
