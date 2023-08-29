@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { Typography } from 'shared/ui/Typography';
 import Image from 'next/image';
+import { useBreakpoint } from 'shared/hooks';
 
 type Props = {
   title: string;
@@ -11,6 +12,9 @@ type Props = {
 };
 
 const PlayerAudioInfo: React.FC<Props> = ({ title, subtitle, image }) => {
+  const mobile = useBreakpoint();
+  console.log(mobile);
+
   return (
     <div className={styles.audioInfo}>
       <Typography className={styles.audioInfoTitle} weight="bold" level={6}>
