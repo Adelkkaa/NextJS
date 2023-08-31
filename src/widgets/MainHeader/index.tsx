@@ -21,10 +21,22 @@ const MainHeader = () => {
     <header className={styles.mainHeader}>
       <div className={styles.mainNav}>
         <button className={styles.mainNavBtn} onClick={router.back}>
-          <Image src={backIcon} alt="back-icon" width={40} height={40} />
+          <Image
+            src={backIcon}
+            className={styles.mainNavBtnImg}
+            alt="back-icon"
+            width={40}
+            height={40}
+          />
         </button>
         <button className={styles.mainNavBtn} onClick={router.forward}>
-          <Image src={forwardIcon} alt="back-icon" width={40} height={40} />
+          <Image
+            src={forwardIcon}
+            className={styles.mainNavBtnImg}
+            alt="back-icon"
+            width={40}
+            height={40}
+          />
         </button>
       </div>
       {session.status === 'unauthenticated' ? (
@@ -36,7 +48,9 @@ const MainHeader = () => {
       ) : (
         <button onClick={() => setIsOpened((prev) => !prev)} className={styles.mainProfile}>
           <Image src={skeletonAvatar} alt="profile-avatar" width={34} height={34} />
-          <Typography>{session.data?.user?.name || 'User'}</Typography>
+          <Typography className={styles.mainProfileName} level={5}>
+            {session.data?.user?.name || 'User'}
+          </Typography>
           <svg
             className={cn({ 'rotate-180': isOpened }, { 'rotate-0': !isOpened })} // todo переворот оформить
             width="22"

@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { Typography } from 'shared/ui/Typography';
 import Image from 'next/image';
-import { useBreakpoint } from 'shared/hooks';
+import { useBreakpoint, useWindowSize } from 'shared/hooks';
 
 type Props = {
   title: string;
@@ -12,8 +12,7 @@ type Props = {
 };
 
 const PlayerAudioInfo: React.FC<Props> = ({ title, subtitle, image }) => {
-  const mobile = useBreakpoint();
-  console.log(mobile);
+  const { isPortraitTablet, isLaptop } = useBreakpoint();
 
   return (
     <div className={styles.audioInfo}>
@@ -23,7 +22,7 @@ const PlayerAudioInfo: React.FC<Props> = ({ title, subtitle, image }) => {
       <Typography className={styles.audioInfoSubtitle} style={{ opacity: 0.6 }} level={6}>
         {subtitle}
       </Typography>
-      {image && (
+      {image && !isPortraitTablet && (
         <Image
           className={styles.audioInfoImg}
           src={image}

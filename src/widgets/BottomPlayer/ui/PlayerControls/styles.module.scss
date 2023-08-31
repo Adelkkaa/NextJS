@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .controlWrapper {
   display: flex;
   gap: 22px;
@@ -10,5 +12,23 @@
   }
   .controlNext {
     cursor: pointer;
+  }
+}
+
+@include portrait-tablet {
+  .controlWrapper {
+    gap: 12px;
+    .controlPrev {
+      width: 24px;
+      height: 24px;
+    }
+    .controlNext {
+      width: 24px;
+      height: 24px;
+    }
+    .controlPause {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

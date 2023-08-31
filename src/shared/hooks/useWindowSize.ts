@@ -16,7 +16,7 @@ export const useWindowSize = (): WindowSize => {
   const handleSize = useMemo(() => {
     return throttle(() => {
       setWindowSize({
-        width: window.innerWidth,
+        width: window.outerWidth,
         height: window.innerHeight,
       });
     }, 300);

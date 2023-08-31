@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .bottomPlayer {
   width: 100%;
   height: 112px;
@@ -17,4 +19,22 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+@include landscape-tablet {
+  .bottomPlayer {
+    padding: 0 10px;
+  }
+}
+
+@include portrait-tablet {
+  .bottomPlayer {
+    height: 90px;
+  }
+}
+
+@include landscape-mobile {
+  .bottomPlayer {
+    justify-content: center;
+  }
 }

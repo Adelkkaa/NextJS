@@ -7,6 +7,7 @@ type WidthRange = {
 };
 
 // todo разобраться почему isPortraitMobile и isLandscapeMobile отрабатывают неправильно
+// Нужно менять useWindowSize, ибо < 600 он уже не цепляется
 
 class AppLayoutService {
   constructor(
@@ -78,5 +79,6 @@ const appLayoutService = new AppLayoutService({
 
 export const useBreakpoint = () => {
   const { width } = useWindowSize();
+  //   console.log(width);
   return appLayoutService.getAll(width);
 };
