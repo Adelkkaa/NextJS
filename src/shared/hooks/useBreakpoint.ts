@@ -79,6 +79,5 @@ const appLayoutService = new AppLayoutService({
 
 export const useBreakpoint = () => {
   const { width } = useWindowSize();
-  //   console.log(width);
   return appLayoutService.getAll(width);
 };

@@ -4,29 +4,33 @@
   display: flex;
   gap: 22px;
 
-  .controlPrev {
+  .controlPrev,
+  .controlPause,
+  .controlNext,
+  .controlShuffle,
+  .controlRepeat {
     cursor: pointer;
   }
-  .controlPause {
-    cursor: pointer;
-  }
-  .controlNext {
-    cursor: pointer;
+  .controlRepeat,
+  .controlShuffle {
+    width: 32px;
+    height: 32px;
+    &Active {
+      svg path {
+        fill: var(--main-white);
+      }
+    }
   }
 }
 
 @include portrait-tablet {
   .controlWrapper {
     gap: 12px;
-    .controlPrev {
-      width: 24px;
-      height: 24px;
-    }
-    .controlNext {
-      width: 24px;
-      height: 24px;
-    }
-    .controlPause {
+    .controlPrev,
+    .controlPause,
+    .controlNext,
+    .controlShuffle,
+    .controlRepeat {
       width: 24px;
       height: 24px;
     }

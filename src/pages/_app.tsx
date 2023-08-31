@@ -5,6 +5,7 @@ import '@styles/styles.scss';
 import { SessionProvider } from 'next-auth/react';
 import type { TypeOptions } from 'react-toastify';
 import dynamic from 'next/dynamic';
+import { WrapperLaypout } from 'layouts/WrapperLayout';
 
 const ToastContainer = dynamic(
   () =>
@@ -17,19 +18,21 @@ const ToastContainer = dynamic(
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Provider store={store}>
     <SessionProvider session={pageProps.session}>
-      <Component {...pageProps} />
-      <ToastContainer
-        position="bottom-left"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+      <WrapperLaypout>
+        <Component {...pageProps} />
+        <ToastContainer
+          position="bottom-left"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </WrapperLaypout>
     </SessionProvider>
   </Provider>
 );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './styles.module.scss';
 import { Typography } from 'shared/ui/Typography';
 import GoogleButton from '../googleButton';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { useForm, useWatch } from 'react-hook-form';
 import Input from 'shared/ui/Input';
@@ -33,6 +33,7 @@ export const LoginForm = () => {
   const passwordValue = useWatch({ name: 'password', control });
   const [authError, setAuthError] = useState('');
   const [isCheckPassword, setIsCheckPassword] = useState(false);
+  const searchParams = useSearchParams();
 
   const onFormSubmit = async (data: FormValues) => {
     const { email, password } = data;
@@ -43,10 +44,9 @@ export const LoginForm = () => {
     });
 
     if (res && !res.error) {
-      router.push('/');
+      router.push(searchParams?.get('callbackUrl') || '/');
       setAuthError('');
     } else {
-      console.log(res);
       setAuthError('E-mail адрес или пароль введены неверно');
     }
   };

@@ -52,7 +52,7 @@ const MainHeader = () => {
             {session.data?.user?.name || 'User'}
           </Typography>
           <svg
-            className={cn({ 'rotate-180': isOpened }, { 'rotate-0': !isOpened })} // todo переворот оформить
+            className={cn({ 'rotate-180': isOpened }, { 'rotate-0': !isOpened })}
             width="22"
             height="22"
             viewBox="0 0 22 22"

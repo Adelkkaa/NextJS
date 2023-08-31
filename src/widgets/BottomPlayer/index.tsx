@@ -12,7 +12,9 @@ import PlayerVolume from './ui/PlayerVolume';
 // todo  выяснить как правильно будет реализовать логику переключения на следующий и предыдущий треки
 
 const BottomPlayer = () => {
-  const { title, subtitle, image, url, isPlaying } = useAppSelector((state) => state.activeSong);
+  const { title, subtitle, image, url, isPlaying, isRepeat, isShuffle } = useAppSelector(
+    (state) => state.activeSong,
+  );
   const dispatch = useAppDispatch();
 
   const [fullTime, setFullTime] = useState('00:00');
@@ -76,7 +78,13 @@ const BottomPlayer = () => {
         src={url}
       ></audio>
       <div className={styles.audioPlayer}>
-        <PlayerControls isPlaying={isPlaying} url={url} ref={playerRef} />
+        <PlayerControls
+          isRepeat={isRepeat}
+          isShuffle={isShuffle}
+          isPlaying={isPlaying}
+          url={url}
+          ref={playerRef}
+        />
         <PlayerTimeRange
           currTime={currTime}
           fullTime={fullTime}

@@ -68,8 +68,8 @@
 
 @include portrait-tablet {
   .menu {
-    max-width: none;
-    min-width: 0px;
+    max-width: 36px;
+    min-width: 36px;
     padding: 20px 23px 0 10px;
   }
   .menuLinkTitle {
