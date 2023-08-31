@@ -50,7 +50,7 @@ const activeSongSlice = createSlice({
       if (state.tracks.length > 0) {
         // repeat logic
         if (state.activeIndex < state.tracks.length - 1 && state.isRepeat) {
-          const url = state.tracks[state.activeIndex].hub.actions[1].uri;
+          const url = state.tracks[state.activeIndex].hub.actions[0].uri;
           state.url = url as string;
         }
         //shuffle logic

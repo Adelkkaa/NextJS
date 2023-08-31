@@ -55,6 +55,8 @@ const BottomPlayer = () => {
       };
       if (isPlaying) {
         playerRef.current.play();
+      } else if (isPlaying && isRepeat && timeValue > 99) {
+        playerRef.current.play();
       } else {
         playerRef.current.pause();
       }
@@ -62,7 +64,7 @@ const BottomPlayer = () => {
     return () => {
       clearInterval(intervalRef.current);
     };
-  }, [isPlaying, url, dispatch]);
+  }, [isPlaying, url, dispatch, isRepeat, timeValue]);
 
   return (
     <div className={styles.bottomPlayer}>
