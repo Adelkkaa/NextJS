@@ -3,18 +3,20 @@ import Image from 'next/image';
 
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
-import { setIsPlaying, setNextSong } from 'redux/features/activeSong';
+import activeSong, { setIsPlaying, setNextSong } from 'redux/features/activeSong';
 import PlayerAudioInfo from './ui/PlayerAudioInfo';
 import PlayerControls from './ui/PlayerControls';
 import PlayerTimeRange from './ui/PlayerTimeRange';
 import PlayerVolume from './ui/PlayerVolume';
+import { Track } from 'redux/services/types';
 
-// todo  выяснить как правильно будет реализовать логику переключения на следующий и предыдущий треки
+export const getRandomValue = (arr: Track[]): number => {
+  return Math.floor(0 + Math.random() * (arr.length - 1 + 1 - 0));
+};
 
 const BottomPlayer = () => {
-  const { title, subtitle, image, url, isPlaying, isRepeat, isShuffle } = useAppSelector(
-    (state) => state.activeSong,
-  );
+  const { title, subtitle, image, url, isPlaying, isRepeat, isShuffle, tracks, activeIndex } =
+    useAppSelector((state) => state.activeSong);
   const dispatch = useAppDispatch();
 
   const [fullTime, setFullTime] = useState('00:00');
@@ -38,6 +40,14 @@ const BottomPlayer = () => {
     } else {
       return 0;
     }
+  };
+
+  const handleNextSong = () => {
+    isRepeat
+      ? dispatch(setNextSong(activeIndex))
+      : isShuffle
+      ? dispatch(setNextSong(getRandomValue(tracks)))
+      : dispatch(setNextSong(activeIndex + 1));
   };
 
   useEffect(() => {
@@ -72,7 +82,7 @@ const BottomPlayer = () => {
       <audio
         onPlay={() => dispatch(setIsPlaying(true))}
         onPause={() => {
-          timeValue > 99 && isPlaying ? dispatch(setNextSong()) : dispatch(setIsPlaying(false));
+          timeValue > 99 && isPlaying ? handleNextSong() : dispatch(setIsPlaying(false));
         }}
         style={{ display: 'none' }}
         ref={playerRef}
@@ -86,6 +96,7 @@ const BottomPlayer = () => {
           isPlaying={isPlaying}
           url={url}
           ref={playerRef}
+          handleNextSong={handleNextSong}
         />
         <PlayerTimeRange
           currTime={currTime}

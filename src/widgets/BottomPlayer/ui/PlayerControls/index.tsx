@@ -26,20 +26,17 @@ type Props = {
   isRepeat: boolean;
   isShuffle: boolean;
   url: string;
+  handleNextSong: () => void;
 };
 
 const PlayerControls = forwardRef<HTMLAudioElement, Props>(
-  ({ isPlaying, url, isRepeat, isShuffle }, ref) => {
+  ({ isPlaying, url, isRepeat, isShuffle, handleNextSong }, ref) => {
     const dispatch = useAppDispatch();
 
     const handleClickControlButton = () => {
       if (ref && typeof ref !== 'function' && ref.current && url !== '') {
         isPlaying ? dispatch(setIsPlaying(false)) : dispatch(setIsPlaying(true));
       }
-    };
-
-    const handleClickNextButton = () => {
-      dispatch(setNextSong());
     };
 
     const handleClickPrevButton = () => {
@@ -85,7 +82,7 @@ const PlayerControls = forwardRef<HTMLAudioElement, Props>(
           alt="next-icon"
           width={32}
           height={32}
-          onClick={handleClickNextButton}
+          onClick={handleNextSong}
         />
         <div
           className={cn(styles.controlRepeat, {
