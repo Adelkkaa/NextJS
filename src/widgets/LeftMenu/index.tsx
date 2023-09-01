@@ -33,7 +33,9 @@ const LeftMenu = () => {
                 height={32}
                 alt={`${item.title}-icon`}
               />
-              <Typography className={styles.menuLinkTitle}>{item.title}</Typography>
+              <Typography level={6} className={styles.menuLinkTitle}>
+                {item.title}
+              </Typography>
             </Link>
           </div>
         ))}

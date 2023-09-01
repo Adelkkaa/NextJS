@@ -1,3 +1,4 @@
+@import '@styles/mixins/media-queries.scss';
 .menu {
   background-color: var(--main-black);
   min-width: 310px;
@@ -40,4 +41,38 @@
 
 .menuLinkTitle {
   display: inline-block;
+}
+
+@include laptop {
+  .menu {
+    max-width: 240px;
+    min-width: 240px;
+  }
+}
+
+@include landscape-tablet {
+  .menu {
+    max-width: 180px;
+    min-width: 180px;
+    padding: 70px 20px 0 15px;
+  }
+  .menuLinks {
+    gap: 10px;
+  }
+  .menuLinkIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
+
+@include portrait-tablet {
+  .menu {
+    max-width: 36px;
+    min-width: 36px;
+    padding: 20px 23px 0 10px;
+  }
+  .menuLinkTitle {
+    display: none;
+  }
 }

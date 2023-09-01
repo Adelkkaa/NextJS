@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .audioInfo {
   max-width: 200px;
   min-width: 200px;
@@ -16,5 +18,36 @@
   &Subtitle {
     cursor: pointer;
     user-select: none;
+  }
+}
+
+@include laptop {
+  .audioInfo {
+    max-width: 150px;
+    min-width: 150px;
+    &Img {
+      top: -180px;
+      width: 240px;
+      height: 180px;
+    }
+  }
+}
+
+@include landscape-tablet {
+  .audioInfoImg {
+    width: 180px;
+  }
+}
+
+@include portrait-tablet {
+  .audioInfo {
+    max-width: 130px;
+    min-width: 130px;
+  }
+}
+
+@include landscape-mobile {
+  .audioInfo {
+    display: none;
   }
 }

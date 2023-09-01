@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .mainHeader {
   height: 80px;
   width: calc(100% - 310px);
@@ -54,5 +56,33 @@
 
   &:hover {
     border-bottom: 2px solid var(--main-green);
+  }
+}
+
+@include landscape-tablet {
+  .mainHeader {
+    height: 60px;
+    width: calc(100% - 180px);
+  }
+  .mainNavBtn {
+    width: 30px;
+    height: 30px;
+    &Img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@include portrait-tablet {
+  .mainHeader {
+    width: calc(100% - 37px);
+    padding: 0px 42px 0px 0px;
+  }
+  .mainProfileName {
+    display: none;
+  }
+  .mainOptionList {
+    padding: 6px 3px 6px 3px;
   }
 }

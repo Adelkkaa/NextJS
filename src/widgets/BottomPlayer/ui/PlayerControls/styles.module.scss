@@ -1,14 +1,38 @@
+@import '@styles/mixins/media-queries.scss';
+
 .controlWrapper {
   display: flex;
   gap: 22px;
 
-  .controlPrev {
+  .controlPrev,
+  .controlPause,
+  .controlNext,
+  .controlShuffle,
+  .controlRepeat {
     cursor: pointer;
   }
-  .controlPause {
-    cursor: pointer;
+  .controlRepeat,
+  .controlShuffle {
+    width: 32px;
+    height: 32px;
+    &Active {
+      svg path {
+        fill: var(--main-white);
+      }
+    }
   }
-  .controlNext {
-    cursor: pointer;
+}
+
+@include portrait-tablet {
+  .controlWrapper {
+    gap: 12px;
+    .controlPrev,
+    .controlPause,
+    .controlNext,
+    .controlShuffle,
+    .controlRepeat {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

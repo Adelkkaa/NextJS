@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .timeRangeWrapper {
   display: flex;
   align-items: center;
@@ -14,5 +16,16 @@
   &Title {
     min-width: 50px;
     max-width: 50px;
+    user-select: none;
+  }
+}
+
+@include portrait-tablet {
+  .timeRangeWrapper {
+    gap: 5px;
+  }
+  .timeRange {
+    width: 130px;
+    height: 3px;
   }
 }

@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .mainPageWrapper {
   display: flex;
   background: linear-gradient(180deg, #3333a3 0%, #121212 100%);
@@ -8,4 +10,10 @@
   display: flex;
   flex-direction: column;
   padding: 0 30px 112px 30px;
+}
+
+@include landscape-tablet {
+  .mainPageContent {
+    padding: 0 10px 112px 20px;
+  }
 }

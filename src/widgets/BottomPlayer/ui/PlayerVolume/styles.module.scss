@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries.scss';
+
 .volume {
   display: flex;
   align-items: center;
@@ -11,5 +13,26 @@
 
   &Icon {
     cursor: pointer;
+  }
+}
+
+@include portrait-tablet {
+  .volume {
+    transform: rotateZ(270deg);
+    &Range {
+      width: 50px;
+      height: 3px;
+    }
+    &Icon {
+      width: 24px;
+      height: 24px;
+      transform: rotateZ(90deg);
+    }
+  }
+}
+
+@include landscape-mobile {
+  .volume {
+    display: none;
   }
 }

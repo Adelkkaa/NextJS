@@ -14,6 +14,7 @@ export const authConfig: NextAuthOptions = {
         email: { label: 'email', type: 'email', required: true },
         password: { label: 'password', type: 'password', required: true },
         name: { label: 'name', type: 'text', required: false },
+        image: { label: 'image', type: 'text', required: false },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) return null;
@@ -25,7 +26,7 @@ export const authConfig: NextAuthOptions = {
           console.error(e);
         }
         const currentUser = users.find(
-          (user: { id: number; email: string; password: string; name: string }) =>
+          (user: { id: number; email: string; password: string; name: string; image: string }) =>
             user.email === credentials.email,
         );
         if (currentUser && currentUser.password === credentials.password) {

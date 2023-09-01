@@ -4,37 +4,43 @@
       "id": 1,
       "email": "snakeadel00@gmail.com",
       "password": "12345678",
-      "name": "Adelkkaa"
+      "name": "Adelkkaa",
+      "image": ""
     },
     {
       "id": "8af79c9c-9a90-4c5e-b1ae-8ab25423c8ba",
       "email": "snakeadel11@gmail.com",
       "password": "123",
-      "name": "Adelk"
+      "name": "Adelk",
+      "image": ""
     },
     {
       "id": "7a0ce448-bca1-45d2-aa20-4f8c5b12c79b",
       "email": "snakeadel11@gmail.co",
       "password": "12345678",
-      "name": "Adelk"
+      "name": "Adelk",
+      "image": ""
     },
     {
       "id": "e6bc53fa-9c43-4b2f-9a5c-faf3acb36e52",
       "email": "snakeadel11@gmail.co2",
       "password": "12345678",
-      "name": "Adelk"
+      "name": "Adelk",
+      "image": ""
     },
     {
       "id": "145f150e-bf72-4657-af0d-135af07cd727",
       "email": "newUser@mail.ru",
       "password": "12345678",
-      "name": "123"
+      "name": "123",
+      "image": ""
     },
     {
       "id": "94b0dcf2-c0b7-4ffd-8ba3-2b316e0c3117",
       "email": "snakdel00@gmail.com",
       "password": "12345678",
-      "name": "231"
+      "name": "231",
+      "image": ""
     }
   ]
 }

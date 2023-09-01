@@ -23,18 +23,22 @@
   :root {
     --level-3: 1.25rem;
     --level-5: 1rem;
+    --level-6: 0.875rem;
   }
 }
 
 @include landscape-mobile {
   :root {
     --level-2: 1.5rem;
+    --level-5: 0.875rem;
+    --level-6: 0.75rem;
   }
 }
 
 @include portrait-mobile {
   :root {
     --level-3: 1rem;
-    --level-6: 0.875rem;
+    --level-5: 0.75rem;
+    --level-6: 0.625rem;
   }
 }
