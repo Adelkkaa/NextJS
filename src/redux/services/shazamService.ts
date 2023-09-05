@@ -1,6 +1,6 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/dist/query/react';
 import { url } from 'inspector';
-import { RootObject } from './types';
+import { HintObject, RootObject } from './types';
 
 export const shazamApi = createApi({
   reducerPath: 'shazamAPI',
@@ -17,6 +17,14 @@ export const shazamApi = createApi({
         url: '/songs/list-recommendations',
         params: {
           key: '484129036',
+        },
+      }),
+    }),
+    fetchAutoComplete: builder.query<HintObject, { term: string }>({
+      query: ({ term }) => ({
+        url: '/auto-complete',
+        params: {
+          term: term,
         },
       }),
     }),

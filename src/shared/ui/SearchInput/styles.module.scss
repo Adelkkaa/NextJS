@@ -1,0 +1,132 @@
+@import '@styles/mixins/media-queries.scss';
+
+.form {
+  position: relative;
+}
+
+.input {
+  width: 468px;
+  height: 52px;
+  padding: 15px 15px 15px 62px;
+  border-radius: 26px;
+  border: none;
+  outline: none;
+  color: var(--main-black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.input::placeholder {
+  color: var(--main-button);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.inputLoop {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  g path {
+    transition: all 0.2s ease-in-out;
+    fill: var(--main-button);
+  }
+
+  &:hover {
+    g path {
+      fill: var(--main-black);
+    }
+  }
+}
+
+.hints {
+  width: 100%;
+  padding: 30px 0px;
+  position: absolute;
+  top: 55px;
+  border-radius: 20px;
+  background-color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hintTitle {
+  z-index: 1;
+  cursor: pointer;
+  padding: 0 30px;
+  border-bottom: 1px solid black;
+  &:last-child {
+    border-bottom: none;
+  }
+  &Active,
+  &:hover {
+    background-color: var(--main-hint);
+  }
+}
+
+@include laptop {
+  .input {
+    width: 255px;
+    font-size: 16px;
+    padding-left: 40px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .inputLoop {
+    top: 13px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@include landscape-tablet {
+  .input {
+    width: 210px;
+    font-size: 14px;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+@include landscape-mobile {
+  .input {
+    width: 120px;
+    padding-left: 10px;
+    font-size: 12px;
+    height: 40px;
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+  .inputLoop {
+    display: none;
+  }
+  .hints {
+    top: 43px;
+    padding: 15px 0px;
+  }
+  .hintTitle {
+    padding: 0px 15px;
+  }
+}
+
+@include portrait-mobile {
+  .input {
+    width: 100px;
+    font-size: 10px;
+    padding-right: 10px;
+    &::placeholder {
+      font-size: 10px;
+    }
+  }
+}

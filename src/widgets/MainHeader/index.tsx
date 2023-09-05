@@ -11,6 +11,7 @@ import skeletonAvatar from '@images/HomePage/skeletonAvatar.png';
 import { Typography } from 'shared/ui/Typography';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { SearchInput } from 'shared/ui/SearchInput';
 
 const MainHeader = () => {
   const router = useRouter();
@@ -38,6 +39,7 @@ const MainHeader = () => {
             height={40}
           />
         </button>
+        {router.pathname === '/search' && <SearchInput />}
       </div>
       {session.status === 'unauthenticated' ? (
         <Link className={styles.mainAuth} href={'/login'}>

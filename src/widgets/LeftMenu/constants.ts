@@ -15,16 +15,16 @@ export const menuItems = [
     icon: searchIcon,
     link: '/search',
   },
-  {
-    title: 'Your Library',
-    icon: libraryIcon,
-    link: '/library',
-  },
-  {
-    title: 'Create Playlist',
-    icon: createPlaylistIcon,
-    link: '/newPlaylist',
-  },
+  // {
+  //   title: 'Your Library',
+  //   icon: libraryIcon,
+  //   link: '/library',
+  // },
+  // {
+  //   title: 'Create Playlist',
+  //   icon: createPlaylistIcon,
+  //   link: '/newPlaylist',
+  // },
   {
     title: 'Liked Songs',
     icon: likedIcon,

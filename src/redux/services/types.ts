@@ -1,3 +1,11 @@
+export interface HintObject {
+  hints: Hint[];
+}
+
+export interface Hint {
+  term: string;
+}
+
 export interface RootObject {
   tracks: Track[];
 }
