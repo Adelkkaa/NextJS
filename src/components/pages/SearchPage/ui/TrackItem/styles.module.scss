@@ -1,0 +1,41 @@
+@import '@styles/mixins/media-queries';
+
+.trackWrapper {
+  width: calc(100vw - 370px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  align-items: center;
+
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.trackPreview {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.trackTime,
+.trackAlbum {
+  display: grid;
+  justify-content: flex-end;
+}
+
+@include laptop {
+  .trackWrapper {
+    width: calc(100vw - 300px);
+  }
+}
+
+@include landscape-tablet {
+  .trackWrapper {
+    width: calc(100vw - 210px);
+  }
+}
+
+@include portrait-tablet {
+  .trackWrapper {
+    width: calc(100vw - 66px);
+  }
+}

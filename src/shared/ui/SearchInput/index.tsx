@@ -54,7 +54,7 @@ export const SearchInput = () => {
         <SearchLoop />
       </div>
       {/* {data && data.hints.length > 0 && !isError && */}
-      {data && data.hints.length > 0 && (
+      {data && data.hints.length > 0 && false && (
         <div className={styles.hints}>
           {data.hints.map((item, index) => {
             return (

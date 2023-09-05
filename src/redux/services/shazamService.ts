@@ -1,5 +1,4 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/dist/query/react';
-import { url } from 'inspector';
 import { HintObject, RootObject } from './types';
 
 export const shazamApi = createApi({
