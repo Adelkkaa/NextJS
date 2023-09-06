@@ -1,3 +1,31 @@
+export interface SearchObject {
+  artists: Artists;
+  tracks: Tracks;
+}
+
+export interface Tracks {
+  hits: TracksHit[];
+}
+
+export interface TracksHit {
+  track: Track;
+}
+
+export interface Artists {
+  hits: ArtistsHit[];
+}
+
+export interface ArtistsHit {
+  artist: HitArtist;
+}
+export interface HitArtist {
+  adamid: string;
+  avatar: string;
+  name: string;
+  verified: boolean;
+  weburl: string;
+}
+
 export interface HintObject {
   hints: Hint[];
 }

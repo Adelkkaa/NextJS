@@ -29,7 +29,7 @@ const ContentItem: React.FC<Props> = ({
   const dispatch = useAppDispatch();
 
   const { url: storeUrl, isPlaying, activeIndex } = useAppSelector((state) => state.activeSong);
-  const currentSongPlayed = activeIndex === index && storeUrl !== '';
+  const currentSongPlayed = activeIndex === index && storeUrl !== '' && storeUrl === url;
 
   const handleClickSong = () => {
     dispatch(setActiveSong({ title, subtitle, url, image, activeIndex: index }));

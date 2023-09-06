@@ -4,3 +4,9 @@
     margin: 64px 0;
   }
 }
+
+.tracksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
