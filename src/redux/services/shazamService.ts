@@ -1,6 +1,5 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/dist/query/react';
-import { url } from 'inspector';
-import { RootObject } from './types';
+import { HintObject, RootObject, SearchObject } from './types';
 
 export const shazamApi = createApi({
   reducerPath: 'shazamAPI',
@@ -20,5 +19,24 @@ export const shazamApi = createApi({
         },
       }),
     }),
+    fetchAutoComplete: builder.query<HintObject, { term: string }>({
+      query: ({ term }) => ({
+        url: '/auto-complete',
+        params: {
+          term: term,
+        },
+      }),
+    }),
+    fetchTracks: builder.query<SearchObject, { term: string }>({
+      query: ({ term }) => ({
+        url: '/search',
+        params: {
+          term: term,
+          limit: 10,
+        },
+      }),
+    }),
   }),
 });
+
+export const { useFetchAllChartsQuery, useFetchAutoCompleteQuery, useFetchTracksQuery } = shazamApi;

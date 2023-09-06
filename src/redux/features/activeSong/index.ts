@@ -8,12 +8,15 @@ type Song = {
   url: string;
   image: string;
   activeIndex: number;
+};
+
+type Utility = {
   isPlaying: boolean;
   isShuffle: boolean;
   isRepeat: boolean;
 };
 
-type State = Song & RootObject;
+type State = Song & Utility & RootObject;
 
 const initialState: State = {
   tracks: [],

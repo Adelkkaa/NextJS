@@ -5,15 +5,16 @@ import ContentItem from '../ContentItem';
 import styles from './styles.module.scss';
 import Loader from 'widgets/Loader';
 import { RootObject } from 'redux/services/types';
-import { useDispatch } from 'react-redux';
 import { setSongsList } from 'redux/features/activeSong';
+import { useAppDispatch } from 'redux/app/hooks';
 
 const ContentList = () => {
   const { data, isFetching, error } = shazamApi.useFetchAllChartsQuery();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handlePostPlaylist = (index: number) => {
     data && dispatch(setSongsList(data));
   };
+
   return (
     <div className={styles.songListWrapper}>
       {isFetching && <Loader />}

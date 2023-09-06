@@ -6,9 +6,6 @@ type WidthRange = {
   max: number;
 };
 
-// todo разобраться почему isPortraitMobile и isLandscapeMobile отрабатывают неправильно
-// Нужно менять useWindowSize, ибо < 600 он уже не цепляется
-
 class AppLayoutService {
   constructor(
     readonly breakpoints: {

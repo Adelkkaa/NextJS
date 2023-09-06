@@ -1,0 +1,81 @@
+@import '@styles/mixins/media-queries';
+
+@keyframes active-icon {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 18px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+.trackWrapper {
+  width: calc(100vw - 370px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  align-items: center;
+
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.trackPreview {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.trackTime,
+.trackAlbum {
+  display: grid;
+  justify-content: flex-end;
+}
+
+.activeIcon {
+  transform: rotate(180deg);
+}
+
+.activeIcon,
+.index {
+  width: 28px;
+  height: 28px;
+}
+
+.activeIconPlaying {
+  svg g rect:nth-child(1) {
+    animation: active-icon 3s linear infinite;
+  }
+  svg g rect:nth-child(2) {
+    animation: active-icon 2s linear infinite;
+  }
+  svg g rect:nth-child(3) {
+    animation: active-icon 4s linear infinite;
+  }
+  svg g rect:nth-child(4) {
+    animation: active-icon 1s linear infinite;
+  }
+  svg g rect {
+    transition: all 0.5s ease;
+  }
+}
+
+@include laptop {
+  .trackWrapper {
+    width: calc(100vw - 300px);
+  }
+}
+
+@include landscape-tablet {
+  .trackWrapper {
+    width: calc(100vw - 210px);
+  }
+}
+
+@include portrait-tablet {
+  .trackWrapper {
+    width: calc(100vw - 66px);
+  }
+}

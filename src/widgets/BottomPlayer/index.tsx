@@ -9,6 +9,7 @@ import PlayerControls from './ui/PlayerControls';
 import PlayerTimeRange from './ui/PlayerTimeRange';
 import PlayerVolume from './ui/PlayerVolume';
 import { Track } from 'redux/services/types';
+import { serializeTime } from 'shared/methods/serializeTime';
 
 export const getRandomValue = (arr: Track[]): number => {
   return Math.floor(0 + Math.random() * (arr.length - 1 + 1 - 0));
@@ -26,13 +27,6 @@ const BottomPlayer = () => {
   const playerRef = useRef<HTMLAudioElement>(null);
   const intervalRef = useRef<NodeJS.Timer>();
 
-  const serializeTime = (time: number) => {
-    if (time > 0) {
-      const minutes = Math.floor(time / 60);
-      const seconds = Math.ceil(time - minutes * 60 - 1);
-      return seconds >= 10 ? `0${minutes}:${seconds}` : `0${minutes}:0${seconds}`;
-    } else return '00:00';
-  };
   const serializeInputValue = (current: number, full: number): number => {
     if (current && full) {
       const percent = (current / full) * 100;
