@@ -8,6 +8,7 @@ import pauseIcon from '@images/HomePage/pause.svg';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
 import { setActiveSong, setIsPlaying } from 'redux/features/activeSong';
 import cn from 'classnames';
+import { Heart } from 'shared/ui/Heart';
 
 type Props = {
   title: string;
@@ -53,6 +54,14 @@ const ContentItem: React.FC<Props> = ({
           height={48}
           alt={'play-icon'}
         />
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+          className={styles.songImgFavorite}
+        >
+          <Heart />
+        </div>
       </div>
       <Typography className={styles.songTitle} weight="bold" level={5}>
         {title}

@@ -28,10 +28,17 @@
   align-items: center;
 }
 
+.trackTimeWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
 .trackTime,
 .trackAlbum {
   display: grid;
   justify-content: flex-end;
+  text-align: right;
 }
 
 .activeIcon {
@@ -42,6 +49,18 @@
 .index {
   width: 28px;
   height: 28px;
+}
+
+.trackImgFavorite {
+  width: 28px;
+  height: 28px;
+  margin-left: 50%;
+  &:hover {
+    svg g path {
+      fill: var(--main-green);
+      transition: all 0.2s ease-in-out;
+    }
+  }
 }
 
 .activeIconPlaying {
@@ -72,10 +91,32 @@
   .trackWrapper {
     width: calc(100vw - 210px);
   }
+  .trackPreview {
+    gap: 5px;
+  }
 }
 
 @include portrait-tablet {
   .trackWrapper {
     width: calc(100vw - 66px);
+  }
+  .trackImgFavorite {
+    margin-left: 0;
+  }
+}
+
+@include landscape-mobile {
+  .activeIcon,
+  .index {
+    width: 22px;
+    height: 22px;
+  }
+  .trackImgFavorite {
+    width: 22px;
+    height: 22px;
+  }
+  .trackAvatar {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -1,3 +1,5 @@
+@import '@styles/mixins/media-queries';
+
 .search {
   //   width: calc(100vw -);
   &Title {
@@ -9,4 +11,41 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.trackWrapper {
+  width: calc(100vw - 370px);
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main-button);
+}
+
+.trackAlbum,
+.trackTime {
+  text-align: right;
+}
+
+@include laptop {
+  .trackWrapper {
+    width: calc(100vw - 300px);
+  }
+}
+
+@include landscape-tablet {
+  .trackWrapper {
+    width: calc(100vw - 210px);
+  }
+}
+
+@include portrait-tablet {
+  .trackWrapper {
+    width: calc(100vw - 66px);
+  }
+}
+
+@include landscape-mobile {
 }

@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
 import { setActiveSong, setIsPlaying } from 'redux/features/activeSong';
 import { ActiveSongIcon } from './icons/ActiveSongIcon';
 import cn from 'classnames';
+import { Heart } from 'shared/ui/Heart';
 
 type Props = {
   index: number;
@@ -63,21 +64,37 @@ export const TrackItem: React.FC<Props> = ({
           </div>
         ) : (
           <div className={styles.index}>
-            <Typography level={5}>{index + 1}</Typography>
+            <Typography level={6}>{index + 1}</Typography>
           </div>
         )}
-        <Image src={img} alt="profile-avatar" width={52} height={52} />
+        <Image
+          src={img}
+          className={styles.trackAvatar}
+          alt="profile-avatar"
+          width={52}
+          height={52}
+        />
       </div>
       <div className={styles.trackInfo}>
-        <Typography level={5}>{title}</Typography>
-        <Typography level={5}>{subtitle}</Typography>
+        <Typography level={6}>{title}</Typography>
+        <Typography level={6}>{subtitle}</Typography>
       </div>
-      <Typography className={styles.trackAlbum} level={5}>
+      <Typography className={styles.trackAlbum} level={6}>
         {album}
       </Typography>
-      <Typography className={styles.trackTime} level={5}>
-        {time}
-      </Typography>
+      <div className={styles.trackTimeWrapper}>
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+          className={styles.trackImgFavorite}
+        >
+          <Heart />
+        </div>
+        <Typography className={styles.trackTime} level={6}>
+          {time}
+        </Typography>
+      </div>
     </div>
   );
 };

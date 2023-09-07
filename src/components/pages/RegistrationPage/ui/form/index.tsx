@@ -4,7 +4,7 @@ import { Typography } from 'shared/ui/Typography';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import Input from 'shared/ui/Input';
-import PasswordInput from '../passwordInput';
+import PasswordInput from 'shared/ui/PasswordInput';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import { toast } from 'react-toastify';
@@ -52,14 +52,15 @@ export const RegistryForm = () => {
 
   const registryNewUser: FuncSend = async (email, password, name) => {
     try {
-      const id = uuidv4();
+      // const id = uuidv4(); Из-за использования id, которые генерируются случайно json-server создает большие трудности при создании put запроса
       const { data, status } = await axios.post(
         'http://localhost:4000/users',
         {
-          id,
+          id: email,
           email,
           password,
           name,
+          image: '',
         },
         {
           headers: {
@@ -122,7 +123,12 @@ export const RegistryForm = () => {
         />
         {['password', 'passwordCopy'].map((item) => {
           return (
-            <PasswordInput key={item} name={item as Values} register={register} errors={errors} />
+            <PasswordInput
+              key={item}
+              name={item as Exclude<Values, 'email' | 'name'>}
+              register={register}
+              errors={errors}
+            />
           );
         })}
         <button type="submit" form="loginFormModal" className={styles.formBtn}>
