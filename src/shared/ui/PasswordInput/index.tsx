@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Input from 'shared/ui/Input';
-import { FormValues, Values } from '../form';
+import { FormValues, Values } from '../../../components/pages/RegistrationPage/ui/form';
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import Image from 'next/image';
 
@@ -8,10 +8,17 @@ import eyeLogo from '@images/AuthPage/eyeLogo.svg';
 
 import styles from './styles.module.scss';
 
+type Val = {
+  password: string;
+  passwordCopy: string;
+  email?: string;
+  name?: string;
+};
+
 type Props = {
-  name: Values;
+  name: Exclude<Values, 'email' | 'name'>;
   register: UseFormRegister<FormValues>;
-  errors: FieldErrors<FormValues>;
+  errors: FieldErrors<Pick<FormValues, 'password' | 'passwordCopy'>>;
 };
 
 const PasswordInput: React.FC<Props> = ({ register, name, errors }) => {
@@ -19,7 +26,7 @@ const PasswordInput: React.FC<Props> = ({ register, name, errors }) => {
 
   return (
     <Input
-      {...register(name as Values, {
+      {...register(name, {
         required: 'Пароль обязателен',
         validate: {
           maxLength: (v) => v.length <= 255 || 'Максимальное число символов 255',
@@ -31,8 +38,8 @@ const PasswordInput: React.FC<Props> = ({ register, name, errors }) => {
       type={isCheckPassword ? 'text' : 'password'}
     >
       <Image
-        onMouseDown={() => setIsCheckPassword(true)}
-        onMouseUp={() => setIsCheckPassword(false)}
+        onPointerDown={() => setIsCheckPassword(true)}
+        onPointerUp={() => setIsCheckPassword(false)}
         className={styles.eyeLogo}
         src={eyeLogo}
         alt="eye-logo"

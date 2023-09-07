@@ -1,0 +1,21 @@
+@keyframes active-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.katty {
+  width: calc(100vw - 370px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &Img {
+    border-radius: 50%;
+    animation: active-icon 5s linear infinite;
+  }
+}

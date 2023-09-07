@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { MainLayout } from 'layouts/MainLayout';
 import ContentList from './ui/ContentList';
 import { Typography } from 'shared/ui/Typography';
 

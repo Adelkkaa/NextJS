@@ -1,3 +1,7 @@
+export interface User {
+  user: { id: number; email: string; password: string; name: string };
+}
+
 export interface SearchObject {
   artists: Artists;
   tracks: Tracks;

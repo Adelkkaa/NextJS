@@ -3,18 +3,18 @@ import { Session, getServerSession } from 'next-auth';
 import Head from 'next/head';
 import React from 'react';
 import { authConfig } from 'components/configs/auth';
-import { SearchPage as Search } from 'components/pages/SearchPage';
+import { LikedPage } from 'components/pages/LikedPage';
 
 const SearchPage: NextPage = (): JSX.Element => (
   <>
     <Head>
-      <title>Search Page</title>
-      <meta name="description" content="Search page" />
+      <title>Liked Songs</title>
+      <meta name="description" content="Liked Songs" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" href="/favicon.ico" />
-      <base href="/search" />
+      <base href="/liked" />
     </Head>
-    <Search />
+    <LikedPage />
   </>
 );
 

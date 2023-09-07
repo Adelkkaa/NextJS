@@ -29,8 +29,6 @@ export const LoginForm = () => {
     reset,
   } = useForm<FormValues>();
 
-  const emailValue = useWatch({ name: 'email', control });
-  const passwordValue = useWatch({ name: 'password', control });
   const [authError, setAuthError] = useState('');
   const [isCheckPassword, setIsCheckPassword] = useState(false);
   const searchParams = useSearchParams();

@@ -32,7 +32,6 @@ export const shazamApi = createApi({
         url: '/search',
         params: {
           term: term,
-          limit: 10,
         },
       }),
     }),

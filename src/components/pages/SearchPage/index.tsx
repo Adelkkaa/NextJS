@@ -42,6 +42,20 @@ export const SearchPage = () => {
 
       {isActive && data && data.tracks.hits.length > 0 && !isError && !isFetching ? (
         <div className={styles.tracksWrapper}>
+          <div className={styles.trackWrapper}>
+            <Typography color="gray" className={styles.trackIndex} level={6}>
+              #
+            </Typography>
+            <Typography color="gray" className={styles.trackTitle} level={6}>
+              Title
+            </Typography>
+            <Typography color="gray" className={styles.trackAlbum} level={6}>
+              Album
+            </Typography>
+            <Typography color="gray" className={styles.trackTime} level={6}>
+              Time
+            </Typography>
+          </div>
           {data.tracks.hits.map(({ track }, index) => (
             <TrackItem
               key={track.key}

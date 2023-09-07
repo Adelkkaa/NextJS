@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import cn from 'classnames';
 
@@ -15,13 +15,14 @@ import { SearchInput } from 'shared/ui/SearchInput';
 
 const MainHeader = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpened, setIsOpened] = useState(false);
   const session = useSession();
 
   return (
     <header className={styles.mainHeader}>
       <div className={styles.mainNav}>
-        <button className={styles.mainNavBtn} onClick={router.back}>
+        <button className={styles.mainNavBtn} onClick={() => router.back()}>
           <Image
             src={backIcon}
             className={styles.mainNavBtnImg}
@@ -30,7 +31,7 @@ const MainHeader = () => {
             height={40}
           />
         </button>
-        <button className={styles.mainNavBtn} onClick={router.forward}>
+        <button className={styles.mainNavBtn} onClick={() => router.forward()}>
           <Image
             src={forwardIcon}
             className={styles.mainNavBtnImg}
@@ -39,7 +40,7 @@ const MainHeader = () => {
             height={40}
           />
         </button>
-        {router.pathname === '/search' && <SearchInput />}
+        {pathname === '/search' && <SearchInput />}
       </div>
       {session.status === 'unauthenticated' ? (
         <Link className={styles.mainAuth} href={'/login'}>

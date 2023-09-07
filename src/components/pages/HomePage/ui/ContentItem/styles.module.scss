@@ -9,7 +9,17 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+
+  .songImg,
+  .songTitle,
+  .songArtist {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+  .playImg {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
 
   &Active {
     .songImg {
@@ -41,6 +51,9 @@
       display: block;
       opacity: 1;
     }
+    .songImgFavorite {
+      opacity: 1;
+    }
   }
 }
 
@@ -52,6 +65,22 @@
 .songImg {
   border-radius: 8px;
   position: relative;
+}
+
+.songImgFavorite {
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  &:hover {
+    svg g path {
+      fill: var(--main-green);
+      transition: all 0.2s ease-in-out;
+    }
+  }
 }
 
 .playImg {
@@ -90,6 +119,10 @@
   .songImg {
     width: 120px;
     height: 120px;
+  }
+  .songImgFavorite {
+    bottom: 10px;
+    right: 0px;
   }
 }
 

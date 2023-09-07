@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 export type TypographyLevel = 1 | 2 | 3 | 4 | 5 | 6;
 export type TypographyWeight = 'regular' | 'medium' | 'semibold' | 'bold';
-export type TypographyColor = 'black' | 'white' | 'green' | 'red';
+export type TypographyColor = 'black' | 'white' | 'green' | 'red' | 'gray';
 
 type Props = PropsWithChildren<{
   el?: string;
