@@ -9,6 +9,10 @@ import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
 import { setActiveSong, setIsPlaying } from 'redux/features/activeSong';
 import cn from 'classnames';
 import { Heart } from 'shared/ui/Heart';
+import { Track } from 'redux/services/types';
+import { setLikedSong } from 'redux/features/actionCreators';
+import { useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
 
 type Props = {
   title: string;
@@ -16,7 +20,8 @@ type Props = {
   url: string;
   image: string;
   index: number;
-  handlePostPlaylist: (arg: number) => void;
+  handlePostPlaylist: () => void;
+  fullInfoTrack: Track;
 };
 
 const ContentItem: React.FC<Props> = ({
@@ -26,16 +31,32 @@ const ContentItem: React.FC<Props> = ({
   image,
   handlePostPlaylist,
   index,
+  fullInfoTrack,
 }) => {
   const dispatch = useAppDispatch();
+  const { data, status } = useSession();
 
   const { url: storeUrl, isPlaying, activeIndex } = useAppSelector((state) => state.activeSong);
   const currentSongPlayed = activeIndex === index && storeUrl !== '' && storeUrl === url;
+  const { likedSongs } = useAppSelector((state) => state.likedSong);
+  const isActive = likedSongs.findIndex((item) => fullInfoTrack.key === item.key) !== -1;
 
   const handleClickSong = () => {
     dispatch(setActiveSong({ title, subtitle, url, image, activeIndex: index }));
-    handlePostPlaylist(index);
+    handlePostPlaylist();
     isPlaying && currentSongPlayed ? dispatch(setIsPlaying(false)) : dispatch(setIsPlaying(true));
+  };
+
+  const handleClickFavorite = async (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    if (status === 'authenticated' && data.user && data.user.email && !isActive) {
+      dispatch(setLikedSong({ id: data.user.email, tracks: [...likedSongs, fullInfoTrack] }));
+    } else if (status === 'authenticated' && data.user && data.user.email && isActive) {
+      const tracks = likedSongs.filter((item) => item.key !== fullInfoTrack.key);
+      dispatch(setLikedSong({ id: data.user.email, tracks: [...tracks] }));
+    } else {
+      toast.error('Вы должны авторизоваться!');
+    }
   };
 
   return (
@@ -55,10 +76,10 @@ const ContentItem: React.FC<Props> = ({
           alt={'play-icon'}
         />
         <div
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-          className={styles.songImgFavorite}
+          onClick={handleClickFavorite}
+          className={cn(styles.songImgFavorite, {
+            [styles.songImgFavoriteActive]: isActive,
+          })}
         >
           <Heart />
         </div>
