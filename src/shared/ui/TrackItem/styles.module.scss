@@ -61,6 +61,18 @@
       transition: all 0.2s ease-in-out;
     }
   }
+  &Active {
+    svg g path {
+      fill: var(--main-green);
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      svg g path {
+        fill: var(--main-white);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
 }
 
 .activeIconPlaying {

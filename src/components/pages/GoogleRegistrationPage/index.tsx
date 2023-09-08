@@ -49,6 +49,19 @@ export const GoogleRegistrationPage = () => {
           },
         },
       );
+      await axios.post(
+        'http://localhost:4000/likedSongs',
+        {
+          id: data?.user?.email,
+          tracks: [],
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        },
+      );
     } catch (e) {
       console.error(e);
     }

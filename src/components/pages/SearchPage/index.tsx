@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import { Typography } from 'shared/ui/Typography';
 import styles from './styles.module.scss';
-import { TrackItem } from './ui/TrackItem';
+import { TrackItem } from 'shared/ui/TrackItem';
 import { useAppDispatch, useAppSelector } from 'redux/app/hooks';
 import { useFetchTracksQuery } from 'redux/services/shazamService';
 import { setActiveSong, setSongsList } from 'redux/features/activeSong';
@@ -40,7 +40,7 @@ export const SearchPage = () => {
       </Typography>
       {isFetching && <Loader />}
 
-      {isActive && data && data.tracks.hits.length > 0 && !isError && !isFetching ? (
+      {isActive && data && prepareData && data.tracks.hits.length > 0 && !isError && !isFetching ? (
         <div className={styles.tracksWrapper}>
           <div className={styles.trackWrapper}>
             <Typography color="gray" className={styles.trackIndex} level={6}>
@@ -56,15 +56,16 @@ export const SearchPage = () => {
               Time
             </Typography>
           </div>
-          {data.tracks.hits.map(({ track }, index) => (
+          {prepareData.tracks.map((item, index) => (
             <TrackItem
-              key={track.key}
+              key={item.key}
               index={index}
-              title={track.title}
-              subtitle={track.subtitle}
-              img={track.images.coverart}
-              album={track.title}
-              url={track.hub.actions[1].uri || ''}
+              title={item.title}
+              album={item.title}
+              subtitle={item.subtitle}
+              url={item.hub.actions[1].uri!}
+              img={item.images.coverart}
+              fullInfoTrack={item}
               handlePostPlaylist={handlePostPlaylist}
             />
           ))}

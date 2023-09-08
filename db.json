@@ -13,23 +13,648 @@
       "name": "Адель Шарипов",
       "image": "https://lh3.googleusercontent.com/a/ACg8ocLGsPBTcyoCM_3z3ixE03umnR_r19mmg-OVQdymwjZ6Y5U=s96-c",
       "id": "snakeadel00@gmail.com"
-    },
-    {
-      "id": "2001_adelkkaa@mail.ru",
-      "email": "2001_adelkkaa@mail.ru",
-      "password": "12345678",
-      "name": "adel sharipov",
-      "image": ""
     }
   ],
   "likedSongs": [
     {
-      "id": "snakeadel00@gmail.com",
-      "tracks": []
+      "id": "2001_adel@mail.ru",
+      "tracks": [
+        {
+          "layout": "5",
+          "type": "MUSIC",
+          "key": "551070593",
+          "title": "Cristal & МОЁТ",
+          "subtitle": "MORGENSHTERN",
+          "share": {
+            "subject": "Cristal & МОЁТ - MORGENSHTERN",
+            "text": "Cristal & МОЁТ by MORGENSHTERN",
+            "href": "https://www.shazam.com/track/551070593/cristal-%D0%BC%D0%BE%D1%91%D1%82",
+            "image": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/64/71/d5/6471d5e7-79f4-b844-1599-992e0a4041b7/3616551710212.jpg/400x400cc.jpg",
+            "twitter": "I used @Shazam to discover Cristal & МОЁТ by MORGENSHTERN.",
+            "html": "https://www.shazam.com/snippets/email-share/551070593?lang=en-US&country=US",
+            "avatar": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/1a/78/88/1a78885a-3459-5d94-c7ea-ea8de147447a/pr_source.png/800x800cc.jpg",
+            "snapchat": "https://www.shazam.com/partner/sc/track/551070593"
+          },
+          "images": {
+            "background": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/1a/78/88/1a78885a-3459-5d94-c7ea-ea8de147447a/pr_source.png/800x800cc.jpg",
+            "coverart": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/64/71/d5/6471d5e7-79f4-b844-1599-992e0a4041b7/3616551710212.jpg/400x400cc.jpg",
+            "coverarthq": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/64/71/d5/6471d5e7-79f4-b844-1599-992e0a4041b7/3616551710212.jpg/400x400cc.jpg",
+            "joecolor": "b:040406p:c7b9bbs:d8b2a5t:a09596q:ae8f85"
+          },
+          "hub": {
+            "type": "APPLEMUSIC",
+            "image": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic_{scalefactor}.png",
+            "actions": [
+              {
+                "name": "apple",
+                "type": "applemusicplay",
+                "id": "1570269217"
+              },
+              {
+                "name": "apple",
+                "type": "uri",
+                "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/9c/88/4f/9c884f1f-001e-3c3d-6f53-df6f51e380f2/mzaf_13871853406638301285.plus.aac.p.m4a"
+              }
+            ],
+            "options": [
+              {
+                "caption": "OPEN",
+                "actions": [
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "applemusicopen",
+                    "uri": "https://music.apple.com/us/album/cristal-%D0%BC%D0%BE%D1%91%D1%82/1570268975?i=1570269217&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  },
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "uri",
+                    "uri": "https://music.apple.com/us/album/cristal-%D0%BC%D0%BE%D1%91%D1%82/1570268975?i=1570269217&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "open",
+                  "providername": "applemusic"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/overflow-open-option_{scalefactor}.png",
+                "type": "open",
+                "listcaption": "Open in Apple Music",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic-overflow_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "applemusic"
+              },
+              {
+                "caption": "BUY",
+                "actions": [
+                  {
+                    "type": "uri",
+                    "uri": "https://itunes.apple.com/us/album/cristal-%D0%BC%D0%BE%D1%91%D1%82/1570268975?i=1570269217&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "buy",
+                  "providername": "itunes"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "type": "buy",
+                "listcaption": "Buy on iTunes",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "itunes"
+              }
+            ],
+            "providers": [
+              {
+                "caption": "Open in Spotify",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/spotify-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/spotify_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:spotify:searchdeeplink",
+                    "type": "uri",
+                    "uri": "spotify:search:Cristal%20%26%20%D0%9C%D0%9E%D0%81%D0%A2%20MORGENSHTERN"
+                  }
+                ],
+                "type": "SPOTIFY"
+              },
+              {
+                "caption": "Open in Deezer",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/deezer-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/deezer_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:deezer:searchdeeplink",
+                    "type": "uri",
+                    "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27Cristal++%D0%9C%D0%9E%D0%81%D0%A2%27%20artist%3A%27MORGENSHTERN%27%7D"
+                  }
+                ],
+                "type": "DEEZER"
+              }
+            ],
+            "explicit": true,
+            "displayname": "APPLE MUSIC"
+          },
+          "artists": [
+            {
+              "id": "42",
+              "adamid": "1371400021"
+            }
+          ],
+          "url": "https://www.shazam.com/track/551070593/cristal-%D0%BC%D0%BE%D1%91%D1%82"
+        },
+        {
+          "layout": "5",
+          "type": "MUSIC",
+          "key": "529937511",
+          "title": "ICE",
+          "subtitle": "MORGENSHTERN",
+          "share": {
+            "subject": "ICE - MORGENSHTERN",
+            "text": "ICE by MORGENSHTERN",
+            "href": "https://www.shazam.com/track/529937511/ice",
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/07/fa/6407fa33-310c-e13f-7604-b72941b1d175/3616407732269.jpg/400x400cc.jpg",
+            "twitter": "I used @Shazam to discover ICE by MORGENSHTERN.",
+            "html": "https://www.shazam.com/snippets/email-share/529937511?lang=en-US&country=US",
+            "avatar": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/1a/78/88/1a78885a-3459-5d94-c7ea-ea8de147447a/pr_source.png/800x800cc.jpg",
+            "snapchat": "https://www.shazam.com/partner/sc/track/529937511"
+          },
+          "images": {
+            "background": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/1a/78/88/1a78885a-3459-5d94-c7ea-ea8de147447a/pr_source.png/800x800cc.jpg",
+            "coverart": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/07/fa/6407fa33-310c-e13f-7604-b72941b1d175/3616407732269.jpg/400x400cc.jpg",
+            "coverarthq": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/07/fa/6407fa33-310c-e13f-7604-b72941b1d175/3616407732269.jpg/400x400cc.jpg",
+            "joecolor": "b:e0d3cdp:040000s:051e39t:302a29q:314256"
+          },
+          "hub": {
+            "type": "APPLEMUSIC",
+            "image": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic_{scalefactor}.png",
+            "actions": [
+              {
+                "name": "apple",
+                "type": "applemusicplay",
+                "id": "1570265904"
+              },
+              {
+                "name": "apple",
+                "type": "uri",
+                "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1e/d8/e0/1ed8e0c3-0242-7f02-4862-73d42498e053/mzaf_15298334786972704623.plus.aac.p.m4a"
+              }
+            ],
+            "options": [
+              {
+                "caption": "OPEN",
+                "actions": [
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "applemusicopen",
+                    "uri": "https://music.apple.com/us/album/ice/1570265897?i=1570265904&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  },
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "uri",
+                    "uri": "https://music.apple.com/us/album/ice/1570265897?i=1570265904&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "open",
+                  "providername": "applemusic"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/overflow-open-option_{scalefactor}.png",
+                "type": "open",
+                "listcaption": "Open in Apple Music",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic-overflow_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "applemusic"
+              },
+              {
+                "caption": "BUY",
+                "actions": [
+                  {
+                    "type": "uri",
+                    "uri": "https://itunes.apple.com/us/album/ice/1570265897?i=1570265904&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "buy",
+                  "providername": "itunes"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "type": "buy",
+                "listcaption": "Buy on iTunes",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "itunes"
+              }
+            ],
+            "providers": [
+              {
+                "caption": "Open in Spotify",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/spotify-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/spotify_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:spotify:searchdeeplink",
+                    "type": "uri",
+                    "uri": "spotify:search:ICE%20MORGENSHTERN"
+                  }
+                ],
+                "type": "SPOTIFY"
+              },
+              {
+                "caption": "Open in Deezer",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/deezer-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/deezer_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:deezer:searchdeeplink",
+                    "type": "uri",
+                    "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27ICE%27%20artist%3A%27MORGENSHTERN%27%7D"
+                  }
+                ],
+                "type": "DEEZER"
+              }
+            ],
+            "explicit": true,
+            "displayname": "APPLE MUSIC"
+          },
+          "artists": [
+            {
+              "id": "42",
+              "adamid": "1371400021"
+            }
+          ],
+          "url": "https://www.shazam.com/track/529937511/ice"
+        },
+        {
+          "layout": "5",
+          "type": "MUSIC",
+          "key": "366932924",
+          "title": "Розовое вино",
+          "subtitle": "Allj & FEDUK",
+          "share": {
+            "subject": "Розовое вино - Allj & FEDUK",
+            "text": "Розовое вино by Allj & FEDUK",
+            "href": "https://www.shazam.com/track/366932924/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%B8%D0%BD%D0%BE",
+            "image": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/22/86/5f/22865fa6-3f48-0ee2-6c43-5eb95fab2543/3614976674423.jpg/400x400cc.jpg",
+            "twitter": "I used @Shazam to discover Розовое вино by Allj & FEDUK.",
+            "html": "https://www.shazam.com/snippets/email-share/366932924?lang=en-US&country=US",
+            "avatar": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/4f/2d/92/4f2d92d6-7a34-e7af-40df-c8d2be6264bf/pr_source.png/800x800cc.jpg",
+            "snapchat": "https://www.shazam.com/partner/sc/track/366932924"
+          },
+          "images": {
+            "background": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/4f/2d/92/4f2d92d6-7a34-e7af-40df-c8d2be6264bf/pr_source.png/800x800cc.jpg",
+            "coverart": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/22/86/5f/22865fa6-3f48-0ee2-6c43-5eb95fab2543/3614976674423.jpg/400x400cc.jpg",
+            "coverarthq": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/22/86/5f/22865fa6-3f48-0ee2-6c43-5eb95fab2543/3614976674423.jpg/400x400cc.jpg",
+            "joecolor": "b:30444dp:ffb4d1s:fe8ba5t:d59db6q:d57d93"
+          },
+          "hub": {
+            "type": "APPLEMUSIC",
+            "image": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic_{scalefactor}.png",
+            "actions": [
+              {
+                "name": "apple",
+                "type": "applemusicplay",
+                "id": "1524550942"
+              },
+              {
+                "name": "apple",
+                "type": "uri",
+                "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ad/a2/88/ada28838-4acd-b01b-bb66-0fa98b484873/mzaf_18063114342176068088.plus.aac.ep.m4a"
+              }
+            ],
+            "options": [
+              {
+                "caption": "OPEN",
+                "actions": [
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "applemusicopen",
+                    "uri": "https://music.apple.com/us/album/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%B8%D0%BD%D0%BE/1524550941?i=1524550942&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  },
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "uri",
+                    "uri": "https://music.apple.com/us/album/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%B8%D0%BD%D0%BE/1524550941?i=1524550942&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "open",
+                  "providername": "applemusic"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/overflow-open-option_{scalefactor}.png",
+                "type": "open",
+                "listcaption": "Open in Apple Music",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic-overflow_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "applemusic"
+              },
+              {
+                "caption": "BUY",
+                "actions": [
+                  {
+                    "type": "uri",
+                    "uri": "https://itunes.apple.com/us/album/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%B8%D0%BD%D0%BE/1524550941?i=1524550942&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "buy",
+                  "providername": "itunes"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "type": "buy",
+                "listcaption": "Buy on iTunes",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "itunes"
+              }
+            ],
+            "providers": [
+              {
+                "caption": "Open in Spotify",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/spotify-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/spotify_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:spotify:searchdeeplink",
+                    "type": "uri",
+                    "uri": "spotify:search:%D0%A0%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B2%D0%B8%D0%BD%D0%BE%20Allj"
+                  }
+                ],
+                "type": "SPOTIFY"
+              },
+              {
+                "caption": "Open in Deezer",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/deezer-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/deezer_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:deezer:searchdeeplink",
+                    "type": "uri",
+                    "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27%D0%A0%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D0%B8%D0%BD%D0%BE%27%20artist%3A%27Allj++FEDUK%27%7D"
+                  }
+                ],
+                "type": "DEEZER"
+              }
+            ],
+            "explicit": true,
+            "displayname": "APPLE MUSIC"
+          },
+          "artists": [
+            {
+              "id": "42",
+              "adamid": "881027285"
+            }
+          ],
+          "url": "https://www.shazam.com/track/366932924/%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%B8%D0%BD%D0%BE"
+        }
+      ]
     },
     {
-      "id": "2001_adel@mail.ru",
-      "tracks": []
+      "id": "snakeadel00@gmail.com",
+      "tracks": [
+        {
+          "layout": "5",
+          "type": "MUSIC",
+          "key": "501844142",
+          "title": "Keeps Me Alive",
+          "subtitle": "Moses Sumney",
+          "share": {
+            "subject": "Keeps Me Alive - Moses Sumney",
+            "text": "Keeps Me Alive by Moses Sumney",
+            "href": "https://www.shazam.com/track/501844142/keeps-me-alive",
+            "image": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/25/91/4c/25914c1a-f147-e093-8e0c-5ed380575c6f/dj.sdqskeyt.jpg/400x400cc.jpg",
+            "twitter": "I used @Shazam to discover Keeps Me Alive by Moses Sumney.",
+            "html": "https://www.shazam.com/snippets/email-share/501844142?lang=en-US&country=US",
+            "avatar": "https://is2-ssl.mzstatic.com/image/thumb/Features114/v4/6f/64/45/6f6445a1-2b83-ad91-9c20-c0ff4e89cf8b/pr_source.png/800x800cc.jpg",
+            "snapchat": "https://www.shazam.com/partner/sc/track/501844142"
+          },
+          "images": {
+            "background": "https://is2-ssl.mzstatic.com/image/thumb/Features114/v4/6f/64/45/6f6445a1-2b83-ad91-9c20-c0ff4e89cf8b/pr_source.png/800x800cc.jpg",
+            "coverart": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/25/91/4c/25914c1a-f147-e093-8e0c-5ed380575c6f/dj.sdqskeyt.jpg/400x400cc.jpg",
+            "coverarthq": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/25/91/4c/25914c1a-f147-e093-8e0c-5ed380575c6f/dj.sdqskeyt.jpg/400x400cc.jpg",
+            "joecolor": "b:190304p:eccec6s:dabecdt:c1a59fq:b398a5"
+          },
+          "hub": {
+            "type": "APPLEMUSIC",
+            "image": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic_{scalefactor}.png",
+            "actions": [
+              {
+                "name": "apple",
+                "type": "applemusicplay",
+                "id": "1485412188"
+              },
+              {
+                "name": "apple",
+                "type": "uri",
+                "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cd/74/dd/cd74dd31-f102-992b-33b9-40f065bd76ee/mzaf_4332948675854687771.plus.aac.ep.m4a"
+              }
+            ],
+            "options": [
+              {
+                "caption": "OPEN",
+                "actions": [
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "applemusicopen",
+                    "uri": "https://music.apple.com/us/album/keeps-me-alive/1485411511?i=1485412188&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  },
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "uri",
+                    "uri": "https://music.apple.com/us/album/keeps-me-alive/1485411511?i=1485412188&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "open",
+                  "providername": "applemusic"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/overflow-open-option_{scalefactor}.png",
+                "type": "open",
+                "listcaption": "Open in Apple Music",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic-overflow_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "applemusic"
+              },
+              {
+                "caption": "BUY",
+                "actions": [
+                  {
+                    "type": "uri",
+                    "uri": "https://itunes.apple.com/us/album/keeps-me-alive/1485411511?i=1485412188&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "buy",
+                  "providername": "itunes"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "type": "buy",
+                "listcaption": "Buy on iTunes",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "itunes"
+              }
+            ],
+            "providers": [
+              {
+                "caption": "Open in Spotify",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/spotify-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/spotify_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:spotify:searchdeeplink",
+                    "type": "uri",
+                    "uri": "spotify:search:Keeps%20Me%20Alive%20Moses%20Sumney"
+                  }
+                ],
+                "type": "SPOTIFY"
+              },
+              {
+                "caption": "Open in Deezer",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/deezer-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/deezer_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:deezer:searchdeeplink",
+                    "type": "uri",
+                    "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27Keeps+Me+Alive%27%20artist%3A%27Moses+Sumney%27%7D"
+                  }
+                ],
+                "type": "DEEZER"
+              }
+            ],
+            "explicit": false,
+            "displayname": "APPLE MUSIC"
+          },
+          "artists": [
+            {
+              "id": "42",
+              "adamid": "843536848"
+            }
+          ],
+          "url": "https://www.shazam.com/track/501844142/keeps-me-alive"
+        },
+        {
+          "layout": "5",
+          "type": "MUSIC",
+          "key": "460384875",
+          "title": "Поэзия фольги",
+          "subtitle": "УННВ",
+          "share": {
+            "subject": "Поэзия фольги - УННВ",
+            "text": "Поэзия фольги by УННВ",
+            "href": "https://www.shazam.com/track/460384875/%D0%BF%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F-%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8",
+            "image": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/0b/20/b5/0b20b53e-27af-69ad-6573-1407593107a9/cover.jpg/400x400cc.jpg",
+            "twitter": "I used @Shazam to discover Поэзия фольги by УННВ.",
+            "html": "https://www.shazam.com/snippets/email-share/460384875?lang=en-US&country=US",
+            "avatar": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/76/13/ce/7613ceab-f930-b1a9-af66-0507aaab2f40/mzl.qmkktvyx.jpg/800x800cc.jpg",
+            "snapchat": "https://www.shazam.com/partner/sc/track/460384875"
+          },
+          "images": {
+            "background": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/76/13/ce/7613ceab-f930-b1a9-af66-0507aaab2f40/mzl.qmkktvyx.jpg/800x800cc.jpg",
+            "coverart": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/0b/20/b5/0b20b53e-27af-69ad-6573-1407593107a9/cover.jpg/400x400cc.jpg",
+            "coverarthq": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/0b/20/b5/0b20b53e-27af-69ad-6573-1407593107a9/cover.jpg/400x400cc.jpg",
+            "joecolor": "b:090909p:ffffffs:dcac57t:cdcdcdq:b28b47"
+          },
+          "hub": {
+            "type": "APPLEMUSIC",
+            "image": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic_{scalefactor}.png",
+            "actions": [
+              {
+                "name": "apple",
+                "type": "applemusicplay",
+                "id": "1454491475"
+              },
+              {
+                "name": "apple",
+                "type": "uri",
+                "uri": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/78/c5/34/78c53423-4429-a3c0-51a7-95cffca0f6a4/mzaf_16562859189310148165.plus.aac.ep.m4a"
+              }
+            ],
+            "options": [
+              {
+                "caption": "OPEN",
+                "actions": [
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "applemusicopen",
+                    "uri": "https://music.apple.com/us/album/%D0%BF%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F-%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8/1454491413?i=1454491475&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  },
+                  {
+                    "name": "hub:applemusic:deeplink",
+                    "type": "uri",
+                    "uri": "https://music.apple.com/us/album/%D0%BF%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F-%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8/1454491413?i=1454491475&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "open",
+                  "providername": "applemusic"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/overflow-open-option_{scalefactor}.png",
+                "type": "open",
+                "listcaption": "Open in Apple Music",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/applemusic-overflow_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "applemusic"
+              },
+              {
+                "caption": "BUY",
+                "actions": [
+                  {
+                    "type": "uri",
+                    "uri": "https://itunes.apple.com/us/album/%D0%BF%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F-%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8/1454491413?i=1454491475&mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_ios&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=itunes&itsct=Shazam_ios"
+                  }
+                ],
+                "beacondata": {
+                  "type": "buy",
+                  "providername": "itunes"
+                },
+                "image": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "type": "buy",
+                "listcaption": "Buy on iTunes",
+                "overflowimage": "https://images.shazam.com/static/icons/hub/ios/v5/itunes-overflow-buy_{scalefactor}.png",
+                "colouroverflowimage": false,
+                "providername": "itunes"
+              }
+            ],
+            "providers": [
+              {
+                "caption": "Open in Spotify",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/spotify-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/spotify_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:spotify:searchdeeplink",
+                    "type": "uri",
+                    "uri": "spotify:search:%D0%9F%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F%20%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8%20%D0%A3%D0%9D%D0%9D%D0%92"
+                  }
+                ],
+                "type": "SPOTIFY"
+              },
+              {
+                "caption": "Open in Deezer",
+                "images": {
+                  "overflow": "https://images.shazam.com/static/icons/hub/ios/v5/deezer-overflow_{scalefactor}.png",
+                  "default": "https://images.shazam.com/static/icons/hub/ios/v5/deezer_{scalefactor}.png"
+                },
+                "actions": [
+                  {
+                    "name": "hub:deezer:searchdeeplink",
+                    "type": "uri",
+                    "uri": "deezer-query://www.deezer.com/play?query=%7Btrack%3A%27%D0%9F%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F+%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8%27%20artist%3A%27%D0%A3%D0%9D%D0%9D%D0%92%27%7D"
+                  }
+                ],
+                "type": "DEEZER"
+              }
+            ],
+            "explicit": true,
+            "displayname": "APPLE MUSIC"
+          },
+          "artists": [
+            {
+              "id": "42",
+              "adamid": "1449022766"
+            }
+          ],
+          "url": "https://www.shazam.com/track/460384875/%D0%BF%D0%BE%D1%8D%D0%B7%D0%B8%D1%8F-%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8"
+        }
+      ]
     }
   ]
 }
